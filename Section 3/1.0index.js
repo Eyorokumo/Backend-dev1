@@ -74,7 +74,7 @@
 // 
 // 1.if less than or equal to 20 -> "Do you want to draw a new card? 🙂"
 // 2.else if exactly 21 -> "wohoo! You've got a Blackjack! 🥳
-// 3.else -> "You're out of the game! 😭
+// 3.else -> "You're out of the game! 😭"
 // if(sum <= 20){
 //     console.log("Do you want to draw a new card? 🙂")
 // } else if(sum === 21){
@@ -260,7 +260,7 @@
 // // let sumEl = document.getElementById("sum-el");
 // let sumEl = document.querySelector("#sum-el");
 
-// function startGame() {
+/// function startGame() {
 //     sumEl.textContent = "Sum: " + sum; // Display the initial
 // if(sum <= 20){
 //     message = "Do you want to draw a new card? "
@@ -496,31 +496,99 @@
 // Lession 25: Creating the cards array
 // 
 // 
-let firstCard = 10
-let secondCard = 4
-// 1.create a new array - cards - that contains firstCard and secondCard
-let cards = [firstCard, secondCard] // array- ordered list of items
-let sum = firstCard + secondCard 
-let hasBlackjack = false
-let isAlive = true
-let message = ""
-let messageEl = document.getElementById("message-el");
-let sumEl = document.querySelector("#sum-el");
-let cardsEl = document.querySelector("#cards-el");
-// 
-// 
-// 
-function startGame() {
-renderGame()
-}
+// let firstCard = 10
+// let secondCard = 4
+// // 1.create a new array - cards - that contains firstCard and secondCard
+// let cards = [firstCard, secondCard] // array- ordered list of items
+// let sum = firstCard + secondCard 
+// let hasBlackjack = false
+// let isAlive = true
+// let message = ""
+// let messageEl = document.getElementById("message-el");
+// let sumEl = document.querySelector("#sum-el");
+// let cardsEl = document.querySelector("#cards-el");
+// // 
+// // 
+// // 
+// function startGame() {
+// renderGame()
+// }
 
-function renderGame(){
-    //2.Refer to the Cards array when rendering  out the cards
-cardsEl.textContent = "cards: " + firstCard + " " + secondCard
-sumEl.textContent = "sum: " + sum
-if (sum <= 20) {
-message = "Do you want to draw a new Card?"
-}else if (sum === 21) {
-message = "you've got Blackjack!"
+// function renderGame(){
+//     //2.Refer to the Cards array when rendering  out the cards
+//     cardsEl.textContent = "cards: " + cards[0] + " " + cards[1] //arrary are called zero indexed
+//     sumEl.textContent = "sum: " + sum
+//     if (sum <= 20) {
+//         message = "Do you want to draw a new Card?"
+//     } else if (sum === 21) {
+//         message = "you've got Blackjack!"
+//         hasBlackjack = true
+//     } else {
+//         message = "You're out of the game! "
+//         isAlive = false 
+//     }
+//     messageEl.textContent = message;
+// }
+
+// // Lession 26: Push a new card to the card array
+
+// function newCard() {
+//     let card = 6
+//     sum += card
+//     //push the card to the cards array
+//     cards.push(card)
+//     console.log(cards); 
+//     // cards.push(Math.floor(Math.random() * 11) + 1); // Generate a random card between 1 and 11
+//   renderGame()
+// }
+
+// Lession 27: Counting in JavaScript
+// let count = 5
+// 
+// count to ten
+// we need to specify.....
+
+// where should we Start counting?
+// where is te FISISH line?
+// what's the STEP SIZE we should use?
+
+//  START             FINISH            STEP SIZE
+// for (let count = 10; count < 21; count += 1) {
+
+// console.log(count);
+// }
+
+// Lession 28: write your first loop
+// for (let i = 0; i < 6; i+= 1) {
+//     console.log(i)
+// }
+
+// // create a for loop that counts from 10 to 100 in steps of 10
+// // Use console.log to log out the numbers
+// for (let i = 10; i <= 101; i += 10) {
+//     console.log(i);
+// }
+
+
+// Lession 29: For loops and arrays
+// 
+// 
+// let messages = ["Hey, how's it going?", "I'm great, thank you ! how about you?", "All good. Been working on my portfolio lately.",
+//     "Same here! ",
+//     "Great to hear",
+//      "🙌"
+// ];
+
+// for (let i = 0; i < messages.length; i++) {
+//     console.log(messages[i]);
+// }
+
+// Lession 30: Write your first array-based loop
+
+let cards = [7, 3, 9]
+
+// Create a for loop that logs out all the cards in the cards array
+// Use Cards.length to specify how the loop should run
+for (let i = 0; i < cards.length; i++) {
+    console.log(cards[i]);
 }
- }
