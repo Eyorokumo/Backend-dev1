@@ -585,10 +585,123 @@
 
 // Lession 30: Write your first array-based loop
 
-let cards = [7, 3, 9]
+// let cards = [7, 3, 9]
 
-// Create a for loop that logs out all the cards in the cards array
-// Use Cards.length to specify how the loop should run
-for (let i = 0; i < cards.length; i++) {
-    console.log(cards[i]);
-}
+// // Create a for loop that logs out all the cards in the cards array
+// // Use Cards.length to specify how the loop should run
+// for (let i = 0; i < cards.length; i++) {
+//     console.log(cards[i]);
+// }
+
+// Lession 31:  for loops, arrays and Dom- check 1.1 index.js
+// 
+// 
+// Lession 32:  Use a loop to render cards
+// 
+// let firstCard =  getRandomCard()
+// let secondCard = getRandomCard()
+// let cards = [firstCard, secondCard] 
+// let sum = firstCard + secondCard
+// let hasBlackjack = false
+// let isAlive = true
+// let message = ""
+// let messageEl = document.getElementById("message-el");
+// let sumEl = document.querySelector("#sum-el");
+// let cardsEl = document.querySelector("#cards-el");
+
+// function startGame() {
+//     renderGame()
+// }
+
+// function renderGame() {
+//     cardsEl.textContent = "cards: " + cards[0] + " " + cards[1]
+//     // Create a for loop that renders out all the cards instead of just two 
+   
+//     for (let i = 0; i < cards.length; i++) {
+//         cardsEl.textContent += cards[i] + " "
+//     }
+//     sumEl.textContent = "sum: " + sum
+//     if (sum <= 20) {
+//         message = "Do you want to draw a new Card?"
+//     } else if (sum === 21) {
+//         message = "you've got Blackjack!"
+//         hasBlackjack = true
+//     } else {
+//         message = "You're out of the game! "
+//         isAlive = false 
+//     }
+//     messageEl.textContent = message;
+// }
+
+// function newCard() {
+//     let card = getRandomCard()
+//     sum += card
+//     // Push the card to the cards array
+//     cards.push(card)
+//     console.log(cards);
+//     renderGame()
+// }
+
+// Lession 33: How can we avoid to hard-code card values?
+// 
+// Create a function, getRandomCard(), that always returns the number 5 -> see it in lession 34
+// // 
+// function getRandomCard() {
+//     let randomNumber = Math.floor(Math.random() * 13) + 1
+//     if (randomNumber > 10) {
+//         return 10  // Face cards are worth 10
+//     } else if (randomNumber === 1) {
+//         return 11  // Ace is worth 11 (you might want to add logic for Ace = 1 later)
+//     } else {
+//         return randomNumber
+//     }
+// }
+
+//console.log(getRandomCard()); // Test the function
+// 
+// Lession 34:  Returning values from functions
+// some walk throughs first first 
+// let player1Time = 102
+// let player2Time = 107
+
+// function getFastestRaceTime() {
+// if (player1Time < player2Time) {
+//     return player1Time
+// }
+// else if (player2Time < player1Time) {
+//     return player2Time
+// } else {
+//     return "It's a tie!"
+// }
+// }
+// console.log(getFastestRaceTime()); // Test the function
+
+
+
+// Write a function that returns the total race time
+// call/invoke the function and store the returned value in a new variable
+//  finally,log out the variable out
+//  
+// function valueoftotaltime() {
+//     let babe =  1240
+//     let aunty =  1300
+//     let total = babe + aunty
+//     return total
+// }
+// console.log(valueoftotaltime()); // 
+// 
+// correction time
+// 
+//  let babe = 1240
+//  let aunty = 1300
+// function valueoftotaltime() {
+// return babe + aunty
+// }
+
+// let totaltime = valueoftotaltime()
+
+// console.log(totaltime)
+// // 
+// 
+
+// Lession 35: Using a function to set the card valus
