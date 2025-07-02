@@ -704,4 +704,6 @@
 // // 
 // 
 
-// Lession 35: Using a function to set the card valus
+// Lession 35: Using a function to set the card value
+//
+// 
