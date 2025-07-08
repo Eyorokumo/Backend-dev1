@@ -660,6 +660,8 @@
 //console.log(getRandomCard()); // Test the function
 // 
 // Lession 34:  Returning values from functions
+// 
+// 
 // some walk throughs first first 
 // let player1Time = 102
 // let player2Time = 107
@@ -706,3 +708,167 @@
 
 // Lession 35: Using a function to set the card value
 
+// let firstCard =  getRandomCard()
+// let secondCard = getRandomCard()
+// let cards = [firstCard, secondCard] 
+// let sum = firstCard + secondCard
+// let hasBlackjack = false
+// let isAlive = true
+// let message = ""
+// let messageEl = document.getElementById("message-el");
+// let sumEl = document.querySelector("#sum-el");
+// let cardsEl = document.querySelector("#cards-el");
+
+// function startGame() {
+//     renderGame()
+// }
+
+// function renderGame() {
+//     cardsEl.textContent = "cards: " + cards[0] + " " + cards[1]
+//     // Create a for loop that renders out all the cards instead of just two 
+   
+//     for (let i = 0; i < cards.length; i++) {
+//         cardsEl.textContent += cards[i] + " "
+//     }
+//     sumEl.textContent = "sum: " + sum
+//     if (sum <= 20) {
+//         message = "Do you want to draw a new Card?"
+//     } else if (sum === 21) {
+//         message = "you've got Blackjack!"
+//         hasBlackjack = true
+//     } else {
+//         message = "You're out of the game! "
+//         isAlive = false 
+//     }
+//     messageEl.textContent = message;
+// }
+
+// function newCard() {
+//     let card = getRandomCard()
+//     sum += card
+//     // Push the card to the cards array
+//     cards.push(card)
+//     console.log(cards);
+//     renderGame()
+// }
+
+
+// // Create a function, getRandomCard(), that always returns the number 5 -> see it in lession 34
+// // 
+// function getRandomCard() {
+//     let randomNumber = Math.floor(Math.random() * 13) + 1
+//     if (randomNumber > 10) {
+//         return 5  // Face cards are worth 10
+//     } else if (randomNumber === 1) {
+//         return 5  // Ace is worth 11 (you might want to add logic for Ace = 1 later)
+//     } else {
+//         return randomNumber
+//     }
+// }
+
+// console.log(getRandomCard()); // Test the function
+
+
+                // Lession 36: Generating random numbers with Math.random()
+// 
+
+// let randomNumber = Math.random()
+
+// console.log(randomNumber)
+
+
+// what does Math.random() do ?
+// 
+// Your answer: it generates a random number between 0 and 1 (not inclusive of 1) 
+
+
+// ...existing code...
+// what does Math.random() do ?
+// Math.random() generates a random decimal number between 0 (inclusive) and 1 (exclusive).
+// For example, it might return 0.234 or 0.987 each time you call it.
+// It's commonly used to create random values in games, simulations, or when you need
+// 
+// 
+                //Lession 37: math.random()*6
+
+
+
+// let randomNumber = Math.random() * 6
+
+// console.log(randomNumber)
+
+
+/*  
+
+In which range will our randomNumber be now ?
+
+From: 0.4246951422598224
+
+
+To: 4.929068158160385
+ so it gives us number almost 6
+*/
+
+            // Lession 38: Flooring the number with Math.random()
+            // 
+    
+        // let flooredNumber = Math.floor(3.45632)
+
+        //  let flooredNumber = Math.floor(12.45645632)
+        
+        // console.log(flooredNumber)
+
+        /*
+          what does Math.floor() do to positive numbers ?
+
+          Your answer: it removes the decimals
+
+
+        */        
+                // Lession 39: Using Math.random() and Math.floor() to create a dice
+                // 
+
+// let randomNumber = Math.floor( Math. random() * 6 )
+
+// console.log(randomNumber)
+
+/*
+
+write down all the possible values randomNumber can hold now!
+
+
+Answer:
+The possible values are: 0, 1, 2, 3, 4, 5
+Math.random() * 6 gives a number from 0 (inclusive) up to but not including 6.
+Math.floor() rounds it down to the nearest whole number, so the results are 0, 1, 2, 3, 4, or 5.
+
+
+
+*/
+
+            // Lession 40: Completing our dice function
+            // 
+            // 
+
+// try to modify the expression so that we get a range from 1 to 6
+// let randomNumber = Math. floor( Math .random() * 6 ) + 1
+
+// console.log(randomNumber)
+
+
+// Now, randomNumber will be 1, 2, 3,5, or 6
+// 
+// 
+// 
+  
+let randomNumber = Math. floor( Math .random() * 6 ) + 1
+
+console.log(randomNumber)
+
+// Create a function, rollDice(), that returns a random number between 1 and 6
+// 
+function rollDice() {
+    return Math.floor(Math.random() * 6) + 1
+}
+
+console.log(rollDice())
