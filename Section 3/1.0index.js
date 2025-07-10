@@ -706,22 +706,22 @@
 // // 
 // 
 
-// Lession 35: Using a function to set the card value
+                    // Lession 35: Using a function to set the card value
 
-// let firstCard =  getRandomCard()
-// let secondCard = getRandomCard()
-// let cards = [firstCard, secondCard] 
-// let sum = firstCard + secondCard
-// let hasBlackjack = false
-// let isAlive = true
-// let message = ""
-// let messageEl = document.getElementById("message-el");
-// let sumEl = document.querySelector("#sum-el");
-// let cardsEl = document.querySelector("#cards-el");
+let firstCard =  getRandomCard()
+let secondCard = getRandomCard()
+let cards = [firstCard, secondCard] 
+let sum = firstCard + secondCard
+let hasBlackjack = false
+let isAlive = true
+let message = ""
+let messageEl = document.getElementById("message-el");
+let sumEl = document.querySelector("#sum-el");
+let cardsEl = document.querySelector("#cards-el");
 
-// function startGame() {
-//     renderGame()
-// }
+function startGame() {
+    renderGame()
+}
 
 // function renderGame() {
 //     cardsEl.textContent = "cards: " + cards[0] + " " + cards[1]
@@ -753,7 +753,7 @@
 // }
 
 
-// // Create a function, getRandomCard(), that always returns the number 5 -> see it in lession 34
+// // Creat a function, getRandomCard(), that always returns the number 5 -> see it in lession 34
 // // 
 // function getRandomCard() {
 //     let randomNumber = Math.floor(Math.random() * 13) + 1
@@ -822,7 +822,7 @@ To: 4.929068158160385
           what does Math.floor() do to positive numbers ?
 
           Your answer: it removes the decimals
-
+            and it's gives you the except number instead of the number and dot decimals
 
         */        
                 // Lession 39: Using Math.random() and Math.floor() to create a dice
@@ -861,14 +861,92 @@ Math.floor() rounds it down to the nearest whole number, so the results are 0, 1
 // 
 // 
   
-let randomNumber = Math. floor( Math .random() * 6 ) + 1
+// let randomNumber = Math. floor( Math .random() * 6 ) + 1
 
-console.log(randomNumber)
+// // console.log(randomNumber)
 
-// Create a function, rollDice(), that returns a random number between 1 and 6
+// // Create a function, rollDice(), that returns a random number between 1 and 6
+// // 
+// function rollDice() {
+//     return Math.floor(Math.random() * 6) + 1
+// }
+
+// console.log(rollDice())
 // 
-function rollDice() {
-    return Math.floor(Math.random() * 6) + 1
+                          // Lession 41 : Completing our dice function
+
+      function renderGame() {
+    cardsEl.textContent = "cards: " + cards[0] + " " + cards[1]
+    
+   
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " "
+    }
+    sumEl.textContent = "sum: " + sum
+    if (sum <= 20) {
+        message = "Do you want to draw a new Card?"
+    } else if (sum === 21) {
+        message = "you've got Blackjack!"
+        hasBlackjack = true
+    } else {
+        message = "You're out of the game! "
+        isAlive = false 
+    }
+    messageEl.textContent = message;
 }
 
-console.log(rollDice())
+function newCard() {
+    let card = getRandomCard()
+    sum += card
+    // Push the card to the cards array
+    cards.push(card)
+    console.log(cards);
+    renderGame()
+}
+
+
+// make these function return a random number between 1 and 13
+// 
+// function getRandomCard() {
+//     let randomNumber = Math.floor(Math.random() * 13) + 1
+//     if (randomNumber > 10) {
+//         return 10  
+//     } else if (randomNumber === 1) {
+//         return 11
+//     } else {
+//         return randomNumber
+//     }
+// }
+
+// console.log(getRandomCard());
+
+          // Lession 42: complete getRandomNumber function
+
+
+function getRandomCard() {
+    let randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber > 10) {
+        return 10  
+    } else if (randomNumber === 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
+}
+
+console.log(getRandomCard());
+
+            //  Lession 43: Assign values in the startGame function
+  
+function startGame() {
+  isAlive = true
+  // Generate two random numbers
+  // Re-assign the cards and sum variables so that the game can start
+  let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard] // Assign the initial two cards
+    sum = firstCard + secondCard  
+  renderGame()
+}
+
+                   // Lession 44: Our new Card feature is broken
