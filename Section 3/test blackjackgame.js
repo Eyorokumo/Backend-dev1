@@ -763,18 +763,18 @@
 
 // Creat a function, getRandomCard(), that always returns the number 5 -> see it in lession 34
 // 
-// function getRandomCard() {
-//     let randomNumber = Math.floor(Math.random() * 13) + 1
-//     if (randomNumber > 10) {
-//         return 5  // Face cards are worth 10
-//     } else if (randomNumber === 1) {
-//         return 5  // Ace is worth 11 (you might want to add logic for Ace = 1 later)
-//     } else {
-//         return randomNumber
-//     }
-// }
+function getRandomCard() {
+    let randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber > 10) {
+        return 5  // Face cards are worth 10
+    } else if (randomNumber === 1) {
+        return 5  // Ace is worth 11 (you might want to add logic for Ace = 1 later)
+    } else {
+        return randomNumber
+    }
+}
 
-// console.log(getRandomCard()); // Test the function
+console.log(getRandomCard()); // Test the function
 
 
                 // Lession 36: Generating random numbers with Math.random()
@@ -914,7 +914,7 @@ Math.floor() rounds it down to the nearest whole number, so the results are 0, 1
 
 
 // make these function return a random number between 1 and 13
-
+// 
 // function getRandomCard() {
 //     let randomNumber = Math.floor(Math.random() * 13) + 1
 //     if (randomNumber > 10) {
@@ -931,31 +931,31 @@ Math.floor() rounds it down to the nearest whole number, so the results are 0, 1
           // Lession 42: complete getRandomNumber function
 
 
-// function getRandomCard() {
-//     let randomNumber = Math.floor(Math.random() * 13) + 1
-//     if (randomNumber > 10) {
-//         return 10  
-//     } else if (randomNumber === 1) {
-//         return 11
-//     } else {
-//         return randomNumber
-//     }
-// }
+function getRandomCard() {
+    let randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber > 10) {
+        return 10  
+    } else if (randomNumber === 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
+}
 
-// console.log(getRandomCard());
+console.log(getRandomCard());
 
-//             //  Lession 43: Assign values in the startGame function
+            //  Lession 43: Assign values in the startGame function
   
-// function startGame() {
-//   isAlive = true
-//   // Generate two random numbers
-//   // Re-assign the cards and sum variables so that the game can start
-//   let firstCard = getRandomCard()
-//     let secondCard = getRandomCard()
-//     cards = [firstCard, secondCard] // Assign the initial two cards
-//     sum = firstCard + secondCard  
-//   renderGame()
-// }
+function startGame() {
+  isAlive = true
+  // Generate two random numbers
+  // Re-assign the cards and sum variables so that the game can start
+  let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard] // Assign the initial two cards
+    sum = firstCard + secondCard  
+  renderGame()
+}
 
 //                    // Lession 44: Our new Card feature is broken
               
@@ -1022,101 +1022,21 @@ Math.floor() rounds it down to the nearest whole number, so the results are 0, 1
                 // Lession 48: only trigger newCard() if you're allowed to
                 
 
-// function newCard() {
-//     // only allow the player to get a new card if she IS alive and does NOT have Blackjack
+function newCard() {
+    // only allow the player to get a new card if she IS alive and does NOT have Blackjack
     
-//     if (isAlive === true && hasBlackjack === false) {
-//     let card = getRandomCard()
-//     sum += card
-//     cards.push(card)
-//     console.log(cards);
-//     renderGame()
-// }
-// }
-
-// //                 //  Lession 49:object sneak peek
-
-// let cards = [] 
-// let sum = 0
-// let hasBlackjack = false
-// let isAlive = false
-// let message = ""
-// let messageEl = document.getElementById("message-el");
-// let sumEl = document.querySelector("#sum-el");
-// let cardsEl = document.querySelector("#cards-el");
-
-// let player = {
-//     name: "John",
-//     chips: 145
-// }
-
-// {
-// name: "Faith",
-// Chips: 145
-// }
-
-
-// let playerEl = document.getElementById("player-el")
-// playerEl.textContent = player.name + ": $" + player.Chips
-
-
-
-// function startGame() {
-//     renderGame()
-// }
-
-// function renderGame() {
-//     cardsEl.textContent = "cards: " + cards[0] + " " + cards[1]
-   
-   
-//     for (let i = 0; i < cards.length; i++) {
-//         cardsEl.textContent += cards[i] + " "
-//     }
-//     sumEl.textContent = "sum: " + sum
-//     if (sum <= 20) {
-//         message = "Do you want to draw a new Card?"
-//     } else if (sum === 21) {
-//         message = "you've got Blackjack!"
-//         hasBlackjack = true
-//     } else {
-//         message = "You're out of the game! "
-//         isAlive = false 
-//     }
-//     messageEl.textContent = message;
-// }
-
-        // LESSION 50: Intro to Objects
-//objects - store data in-depth - composite / complex data type
-// key-value pairs
- 
-
-        // Lession 51: Create your first object
-        // 
-
-// create an object that represents an airbnb castle listing.
-// it should contain at least one boolean, one string, one number, and one array
-// log out at least two of the keys using the dot notation
-
-
-// let airbnbCastle = {
-//     title: "Enchanted Castle",
-//     pricePernight: 350,
-//     isAvailable: true,
-//     amenities: ["Wifi", "pool", "Fireplace", "Garden"]
-// }
-
-// console.log(airbnbCastle.title);
-// console.log(airbnbCastle.amenities);
-
-        // Lession 52: use an object to store player data
-// 2. Create the player object. Give it two keys, name and chips.
-let player = {
-    name: "John",
-    chips: 145
+    if (isAlive === true && hasBlackjack === false) {
+    let card = getRandomCard()
+    sum += card
+    cards.push(card)
+    console.log(cards);
+    renderGame()
+}
 }
 
-// Game variables
-let cards = []
+                //  Lession 49:object sneak peek
+
+let cards = [] 
 let sum = 0
 let hasBlackjack = false
 let isAlive = false
@@ -1125,23 +1045,30 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.querySelector("#cards-el");
 
-// 3. Grab ahold of the player-el paragraph and store it in a variable
-let playerEl = document.getElementById("player-el");
+let player = {
+    name: "John",
+    chips: 145
+}
 
-// 4. Render the player's name and chips in playerEl
-playerEl.textContent = player.name + ": $" + player.chips
+let player2 = {
+    name: "Faith",
+    Chips: 145
+}
+
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.Chips
+
+
 
 function startGame() {
-    isAlive = true
-    let firstCard = getRandomCard()
-    let secondCard = getRandomCard()
-    cards = [firstCard, secondCard]
-    sum = firstCard + secondCard
     renderGame()
 }
 
 function renderGame() {
-    cardsEl.textContent = "cards: "
+    cardsEl.textContent = "cards: " + cards[0] + " " + cards[1]
+   
+   
     for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " "
     }
@@ -1158,37 +1085,8 @@ function renderGame() {
     messageEl.textContent = message;
 }
 
-// Helper function for random card
-function getRandomCard() {
-    let randomNumber = Math.floor(Math.random() * 13) + 1
-    if (randomNumber > 10) {
-        return 10
-    } else if (randomNumber === 1) {
-        return 11
-    } else {
-        return randomNumber
-    }
-}
 
-            //  Lession 53: Methods on object
-let player = {
-    name: "John",
-    chips: 1,
-    sayhello: function(){
-        console.log("per")
-    }
-}
+        // Lession 50: Intro to Objects
+//objects - store data in-depth - composite / complex data type
+// key-value pairs
 
-player.sayhello()
-
-            // Lession 54: Congrates & Recap
-            // 
-        //1. Arrays
-        // 2. Objects
-        // 3. Booleans
-        // 4. if else statements - key
-        // 5.  comparison operators
-        // 6. logical operators
-        // 7. for loops
-        // 8. The math object
-        // 9. return statements
