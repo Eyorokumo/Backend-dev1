@@ -80,16 +80,35 @@ const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 
 // push the value "www.awesomelead.com" to myArray when the input button is clicked
-inputBtn.addEventListener("click",() => {
-    myLeads.push("www.awesomelead.com");
+// inputBtn.addEventListener("click",() => {
+//     myLeads.push("www.awesomelead.com");
 
-    const inputValue = inputEl.value.trim(); 
-    if (inputValue !== "") {
-     myLeads.push(inputValue);
-     inputEl.value = "";
-    }
-    console.log(myLeads);
+//     const inputValue = inputEl.value.trim(); 
+//     if (inputValue !== "") {
+//      myLeads.push(inputValue);
+//      inputEl.value = "";
+//     }
+//     console.log(myLeads);
 
-});
+// });
 
 //Lesson 11:  Push the value from the input field                           
+inputBtn.addEventListener("click", function() {
+    // push the value from the inputEl into the myLeads array
+    let inputValue = inputEl.value;
+    
+    // instead of the hard-coded "www.awesomeleads.com" value
+    // Google -> "get value from input field javascript"
+    if (inputValue.trim() !== "") {
+        myLeads.push(inputValue);
+        console.log(myLeads);
+        inputEl.value = "";
+    }else {
+
+    console.log("please enter a value!")
+    }
+});
+
+
+// Lesson 12: Use a for loop to log out leads
+
